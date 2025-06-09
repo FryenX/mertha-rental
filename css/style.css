@@ -1,0 +1,803 @@
+@font-face {
+    font-family: 'Poppins', 'sans-serif';
+    src: url(../font/Poppins-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root{
+    --bg-color: #fff;
+    --text-color: #221314;
+    --main-color: #E76F51;
+    --second-color: #f4A261;
+    --third-color: #E9C46A;
+    --fourth-color: #36BA98;
+    --p-font-size: 12px;
+    --carousel-caption: rgb(104, 102, 102);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/* Navbar */
+.main-color {
+    background-color: var(--main-color);
+}
+
+.underline-on-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-on-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: var(--third-color);
+    transition: width .3s;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.underline-on-hover:hover::after {
+    width: 80%;
+    transition: width 0.3s ease-in-out;
+}
+
+.dropdown {
+    transition: all ease-in-out .3s;
+}
+
+.navbar {
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    transition: ease .4s;
+}
+
+#offcanvasNavbar {
+    display: block;
+    width: 60%;
+    background-color: var(--main-color);
+}
+
+.offcanvas-header {
+    padding-bottom: 5px;
+}
+
+.offcanvas-body {
+    padding-top: 5px;
+}
+
+.navbar-toggler {
+    border: none;
+    border-radius: 12px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 100%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.searchbar {
+    position: relative;
+    appearance: none;
+}
+
+.searchbar input:focus {
+    outline: 0;
+    border: 1px solid var(--bg-color);
+}
+
+.border-search {
+    border-radius: 25px;
+    border: 1px solid var(--bg-color);
+    background-color: transparent;
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.border-search:focus {
+    border: none;
+}
+
+.border-search::placeholder {
+    color: var(--bg-color);
+}
+
+.border-search {
+    padding: 8px 12%;
+}
+
+.search-btn {
+    color: var(--bg-color);
+    font-size: 18px;
+    position: absolute;
+    right: 12%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-btn:hover {
+    color: var(--bg-color);
+}
+
+.login-btn {
+    font-size: 18px;
+    color: var(--bg-color);
+    background-color: var(--fourth-color);
+    border-radius: 25px;
+    padding: 9px 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.login-btn:hover {
+    color: var(--bg-color);
+    background-color: var(--second-color);
+}
+
+.login-btn:active {
+    background-color: var(--third-color);
+}
+
+/* Carousel */
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 800px;
+}
+
+/* how it work */
+.work-wraper {
+    background-color: var(--fourth-color);
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.work-section {
+    background-color: var(--second-color);
+    padding-top: 80px;
+}
+
+.work-wraper .work-text {
+    width: auto;
+    display: grid; 
+    height: 100%;
+    padding: 35px 10px;
+    color: var(--bg-color);
+}
+
+
+.work-h5 {
+    padding: 0px 40px;
+}
+
+.work-p {
+    padding: 0px 40px;
+}
+
+.carousel-caption {
+    color: rgb(255, 255, 255);
+}
+
+.carousel-caption h1 {
+    font-size: 80px;
+    text-shadow:
+    -1.5px -1.5px 0 var(--carousel-caption),
+    1.5px -1.5px 0 var(--carousel-caption),
+    -1.5px 1.5px 0 var(--carousel-caption),
+    1.5px 1.5px 0 var(--carousel-caption);
+}
+
+.carousel-caption h5 {
+    text-shadow:
+    -1px -1px 0 var(--carousel-caption),
+    1px -1px 0 var(--carousel-caption),
+    -1px 1px 0 var(--carousel-caption),
+    1px 1px 0 var(--carousel-caption);
+}
+
+
+.num-bg {
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 12px;
+    border-radius: 30px;
+}
+
+/* Explore garage */
+.row .col .rounded {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.caption-garage h5 a{
+    list-style: none;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.garage-content {
+    padding: 10px 20px;
+}
+
+/* bike choices */
+.rent-btn {
+    background-color: var(--main-color);
+    border: none;
+    color: var(--bg-color);
+}
+
+.bike_img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: all ease-in-out .3s;
+}
+
+.rent-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.col ul li .row .col-sm-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: all ease-in-out .3s;
+}
+
+.category_img:hover {
+    transform: scale(1.02);
+}
+
+.col ul li .row .col-sm-6 p{
+    color: rgb(121, 120, 120);
+    font-size: 14px;
+}
+
+.col ul li .row .col-sm-6 h6 {
+    color: rgb(114, 113, 113);
+}
+
+.col ul li .row .col-sm-6 {
+    margin: auto;
+}
+
+.popular-choices {
+    padding-top: 50px;
+    background-color: #ececec;
+}
+
+.rent-wraper {
+    padding: 0px 2px;
+}
+
+.rent-bike-name {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 8px 0px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.rent-duration {
+    margin: 2px 0px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 200;
+}
+
+.harga {
+    color: gray;
+    font-size: 10px;
+}
+
+/* rent a bike */
+
+.rent-bike {
+    padding-top: 100px;
+}
+
+.rent-bike-text-wraper {
+    padding: 0px 80px;
+}
+
+.rent-bike img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    aspect-ratio: 16/9;
+}
+
+.date {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.form-select {
+    width: 50%;
+    display: grid;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.rent-bike-btn {
+    display: flex;
+    margin: auto;
+}
+
+/* Footer */
+#contact {
+    background: var(--main-color);
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    padding: 20px 0;
+}
+
+.list {
+    width: 25%;
+}
+
+.list h4 {
+    font-size: 21px;
+    margin-bottom: 30px;
+    color: var(--bg-color);
+    position: relative;
+}
+
+.list h4::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    left: 0;
+    bottom: -10px;
+    background: var(--bg-color);
+}
+
+.list ul li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.list ul li a {
+    color: #ffffff;
+    font-size: 16px;
+    display: block;
+    transition: .3s;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list ul {
+    padding: 0;
+}
+
+.list ul li a:hover {
+    color: var(--bg-color);
+    transform: translateX(14px);
+}
+
+.social a {
+    height: 40px;
+    width: 40px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    border-radius: 15px;
+    transition: .3s;
+    margin-right: 10px;
+}
+
+.list .social a:hover {
+    transform: scale(1.1);
+}
+
+.end-text {
+    text-align: center;
+    padding-top: 90px;
+}
+
+.end-text p {
+    color: var(--bg-color);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+#contact {
+    padding: 50px 5%;
+}
+
+/* brands */
+.head-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+
+/* faq */
+
+.faq {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: #ececec;
+}
+
+/* padding */
+.padding-list-group {
+    padding: 12px 0px;
+}
+
+.padding-list-group-item {
+    padding: 20px 20px;
+}
+
+.padding-content {
+    padding-bottom: 100px;
+}
+
+.padding-title {
+    padding-bottom: 50px;
+}
+
+.padding-brands {
+    padding-top: 100px;
+}
+
+/* Notice */
+.notice-text-success {
+    margin-bottom: 5px;
+    color: var(--fourth-color);
+}
+
+.notice-text-failed {
+    margin-bottom: 5px;
+    color: red;
+}
+
+.col-order {
+    width: 16.66666667%;
+}
+
+@media (max-width: 1396px) {
+    .rent-bike img {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .list {
+        width: 100%;
+    }
+
+    #offcanvasNavbar {
+        display: block;
+        width: 40%;
+    }
+
+    #icon-user {
+        display: none;
+    }
+
+    .col-sm-6 {
+        width: 100%;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .col-8 {
+        width: 100%;
+    }
+
+    .col-sm-6 {
+        width: 100%;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+
+    .faq .col-6 {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .login-btn {
+        margin: 10px 0px;
+        display: grid;
+    }
+
+    .padding-list-group {
+        padding: 12px 24px;
+    }
+
+    .padding-list-group-item {
+        padding: 18px 18px;
+    }
+
+    .padding-garage {
+        padding: 20px 40px;
+    }
+
+    .col ul li .row .col-sm-4 img {
+        padding-bottom: 8px;
+        width: 100%;
+        height: 240px;
+    }
+
+    .popular-choices .col-6 {
+        width: 100%;
+    }
+
+    .popular-choices .col-sm-6 {
+        width: 100%;
+    }
+
+    .rent-bike .col-6 {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .rent-bike-text-wraper {
+        padding: 0px 10px;
+    }
+
+    .faq .col-6 {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+}
+
+@media (max-width: 540px) {
+    #offcanvasNavbar {
+        width: 60%;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+
+    .faq .col-6 {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .top-text h1 i{
+        font-size: 28px;
+    }
+
+    .col-6-center {
+        height: auto;
+    }
+
+    .header-menu {
+        height: 100px;
+    }
+}
+
+.daterangepicker .drp-calendar.left {
+    display: block;
+}
+.daterangepicker .drp-calendar.right {
+    display: none;
+}
+.daterangepicker .ranges {
+    float: none !important;
+    margin: 0 auto;
+}
+
+.tb-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--text-color);
+    font-weight: 700;
+}
+
+.tb-bikes {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.tb-bikes p{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 0px;
+}
+
+.tb-bikes a{
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.tb-bikes input {
+    font-size: 10px;
+}
+
+.tb-bikes .btn {
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 5px 0px;
+}
+
+.tb-content {
+    padding: 10px 0px;
+    font-weight: 200;
+}
+
+.tb-center {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.header-menu {
+    position: relative;
+}
+
+.top-filler {
+    position: relative;
+}
+
+.overlay-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* Ensure the image behaves like a block element */
+}
+
+.top-filler::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity value as needed */
+    pointer-events: none; /* Ensure the overlay does not interfere with clicking on the image */
+}
+
+.text-price {
+    top: 15px;
+    left: 15px;
+    color: var(--main-color);
+}
+
+.text-price h5 {
+    font-size: 20px;
+}
+
+.whatsapp-btn, .telegram-btn {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.whatsapp-icon, .telegram-icon {
+    margin-right: 10px;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+/* Responsive font sizes */
+@media (max-width: 1200px) {
+    .whatsapp-btn, .telegram-btn {
+        font-size: 14px;
+    }
+    .whatsapp-icon, .telegram-icon {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 992px) {
+    .whatsapp-btn, .telegram-btn {
+        font-size: 13px;
+    }
+    .whatsapp-icon, .telegram-icon {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn, .telegram-btn {
+        font-size: 12px;
+    }
+    .whatsapp-icon, .telegram-icon {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .whatsapp-btn, .telegram-btn {
+        font-size: 11px;
+    }
+    .whatsapp-icon, .telegram-icon {
+        font-size: 30px;
+    }
+}

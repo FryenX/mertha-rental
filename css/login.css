@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Poppins', 'sans-serif';
+    src: url(../font/Poppins-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #221314;
+    --main-color: #E76F51;
+    --second-color: #f4A261;
+    --third-color: #E9C46A;
+    --fourth-color: #36BA98;
+    --p-font-size: 12px;
+}
+
+body {
+    background-color: #cecece;
+}
+
+.rent-btn {
+    background-color: var(--main-color);
+    border: none;
+    color: var(--bg-color);
+}
+
+.rent-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.btn-check:checked + .btn, 
+:not(.btn-check) + .btn:active, 
+.btn:first-child:active, 
+.btn.active, 
+.btn.show {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.featured-image img {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.right-box {
+    padding: 30px 10px 30px 10px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.box-area {
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.login-text {
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-border {
+    background: var(--fourth-color);
+    padding: 10px 12px;
+    border-radius: 20px;
+}
+
+.notice-text-success {
+    margin-bottom: 5px;
+    color: var(--fourth-color);
+}
+
+.notice-text-failed {
+    margin-bottom: 5px;
+    color: red;
+}
+
+@media only screen and (max-width: 992px) {
+    .box-area {
+        margin: 0 10px;
+    }
+
+    .left-box {
+        height: auto;
+        overflow: visible;
+        padding: 20px;
+    }
+
+    .featured-image img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .left-box, .right-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .input-group.mb-3 {
+        margin-bottom: 1rem;
+    }
+
+    .input-group.position-relative {
+        position: static;
+    }
+
+    .login-text p {
+        font-size: 1.5rem;
+    }
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .featured-image img {
+        width: 80%;
+    }
+
+    .box-area {
+        margin: 0 5px;
+    }
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .login-text {
+        bottom: 10px;
+    }
+
+    .input-group.mb-3, .input-group.mb-1 {
+        margin-bottom: 0.5rem;
+    }
+
+    .input-group.position-relative {
+        margin-bottom: 1rem;
+    }
+
+    .signup-msg {
+        font-size: 12px;
+    }
+}
+
+.input-group.form-element {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.error {
+    color: red;
+    display: none;
+    margin-top: 5px;
+}
+
+.signup-msg {
+    text-align: center;
+    color: red;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    font-size: 14px;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.notice-height {
+    height: 25px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.message-container {
+    height: 40px; /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -30px; /* Adjust this value based on the form layout */
+    left: 10px;
+    border-radius: 5px; /* Optional: rounded corners */
+    margin-bottom: 10px; /* Add margin to prevent overlap with other elements */
+}
+
+input[type="submit"] {
+    margin-top: 10px; /* Ensure space between the message container and submit button */
+}
+
+
